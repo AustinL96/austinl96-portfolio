@@ -15,3 +15,5 @@ Access the finalized webpage with [this link!](https://austinl96.github.io/austi
 ## License
 
 MIT License. <i>Subject to change.</i>
+
+All Placeholder images for projects and the Hero image are royalty free from [Pexels.](https://www.pexels.com/)
