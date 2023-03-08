@@ -2,14 +2,15 @@
     --main-background: darkgreen;
     --header-footer-bg: whitesmoke;
     --header-footer-color: darkgreen;
-
+    --section-bg: darkolivegreen;
+    --section-color: whitesmoke;
+    --default-border: 5px solid black;
 }
 
 * {
     box-sizing: border-box;
     padding: 0;
     margin: 0;
-    color: var(--header-footer-color);
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
 
@@ -27,7 +28,7 @@ header {
     color: var(--header-footer-color);
     margin: 5px;
     padding: 1%;
-    border: 5px solid black;
+    border: var(--default-border);
 }
 
 header h1 {
@@ -36,7 +37,7 @@ header h1 {
 }
 
 header nav {
-    border: 5px solid black;
+    border: var(--default-border);
 }
 
 header nav a {
@@ -45,6 +46,7 @@ header nav a {
     text-decoration: none;
     display: inline-block;
     position: relative;
+    color: var(--header-footer-color);
 }
 
 /* NAVIGATION UNDERLINE ANIMATION */
@@ -57,7 +59,7 @@ header nav a:after {
     content: '';
     position: absolute;
     background-color: darkolivegreen;
-    transition: transform 0.5s ease-out;
+    transition: transform 0.3s ease-out;
     width: 100%;
     align-content: center;
     transform: scaleX(0);
@@ -67,3 +69,176 @@ header nav a:after {
     bottom: 10px;
   }
   
+  /* ABOUT ME AND HERO IMAGE */
+.about-me-images {
+    display: flex;
+    margin: 5px;
+}
+article {
+    display: flex;
+    flex-direction: column;
+    background-color: var(--section-bg);
+    color: var(--section-color);
+    border: var(--default-border);
+    width: 50%;
+}
+article h2 {
+    text-align: center;
+    font-size: 30px;
+    text-shadow: 3px 3px rgba(0, 0, 0, 0.5);  
+}
+
+article img {
+    width: 30%;
+    align-self: center;
+    border: var(--default-border);
+}
+
+article p {
+    font-size: 20px;
+    text-indent: 5%;
+    padding: 2%;
+    text-shadow: 3px 3px rgba(0, 0, 0, 0.4); 
+}
+
+.hero {
+    display: flex;
+    max-width: 100%;
+    max-height: auto;
+    border: var(--default-border);
+}
+
+/* MY WORK PORTFOLIO */
+.my-work h2 {
+    text-align: center;
+    margin: 5px;
+    color: var(--section-color);
+    font-size: 30px;
+    text-shadow: 3px 3px rgba(0, 0, 0, 0.5);
+}
+
+/* TOP PROJECT - MINIS */
+.minis-project {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.minis-project a {
+    width: 60%;
+}
+
+.minis-project img {
+    border: 0.5em solid green;
+    box-shadow: 10px 10px rgba(0, 0, 0, 0.2);
+    width: 100%;
+}
+.minis-project figcaption {
+    border: 0.2em solid green;
+    font-size: 2rem;
+    padding: 0.3em;
+    width: 20%;
+    text-align: center;
+    background: var(--section-bg);
+    color: var(--section-color);
+    text-shadow: 0.11em 0.11em rgba(0, 0, 0, 0.5);
+    box-shadow: 0.22em 0.22em rgba(0, 0, 0, 0.2);
+}
+
+/* PLACEHOLDER PROJECT SPACE */
+.placeholder1,
+.placeholder2,
+.placeholder3 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 1em;
+}
+
+.placeholder1 img,
+.placeholder2 img,
+.placeholder3 img {
+    width: 40%;
+    border: 5px solid green;
+    box-shadow: 10px 10px rgba(0, 0, 0, 0.2);
+}
+
+.placeholder1 figcaption,
+.placeholder2 figcaption,
+.placeholder3 figcaption {
+    border-bottom: 0.2em solid green;
+    border-left: 0.2em solid green;
+    border-right: 0.2em solid green;
+    font-size: 1.5em;
+    padding: 0.3em;
+    width: 15%;
+    text-align: center;
+    background: var(--section-bg);
+    color: var(--section-color);
+    text-shadow: 0.11em 0.11em rgba(0, 0, 0, 0.5);
+    box-shadow: 0.22em 0.22em rgba(0, 0, 0, 0.2);
+}
+
+/* PORTFOLIO IMAGE SHADING */
+.minis-project img:hover,
+.placeholder1 img:hover,
+.placeholder2 img:hover,
+.placeholder3 img:hover {
+    box-shadow: 0px 30px 30px rgba(0, 0, 0, 0.8);
+    transition: transform 0.3s ease-out
+}
+
+/* CONTACT ME FOOTER */
+footer {
+    display: flex;
+    width: auto;
+    text-align: center;
+    justify-content: space-between;
+    flex-direction: column;
+    background-color: var(--header-footer-bg);
+    color: var(--header-footer-color);
+    margin: 5px;
+    padding: 1%;
+    border: var(--default-border);
+}
+
+footer h2 {
+    font-size: 50px;
+    text-align: center;
+    text-shadow: 3px 3px rgba(0, 0, 0, 0.3);
+}
+
+footer nav p {
+    padding: .3em;
+    font-size: 20px;
+    display: inline;
+    position: relative;
+    color: var(--header-footer-color);
+}
+
+footer a {
+    text-decoration: none;
+    color: var(--header-footer-color);
+}
+
+/* CONTACT ME FOOTER ANIMATIONS*/
+footer nav p:hover:after {
+    transform: scaleX(1);
+    transform-origin: initial;
+}
+
+footer nav p:after {
+    content: '';
+    position: absolute;
+    background-color: darkolivegreen;
+    transition: transform 0.3s ease-out;
+    width: 100%;
+    align-content: center;
+    transform: scaleX(0);
+    height: 3px;
+    left: 0;
+    right: 0;
+    bottom: 0px;
+  }
