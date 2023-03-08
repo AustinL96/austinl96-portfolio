@@ -32,7 +32,7 @@ header {
 }
 
 header h1 {
-    font-size: 50px;
+    font-size: 3.5em;
     text-shadow: 3px 3px rgba(0, 0, 0, 0.3);
 }
 
@@ -42,7 +42,7 @@ header nav {
 
 header nav a {
     padding: .3em;
-    font-size: 40px;
+    font-size: 2.5em;
     text-decoration: none;
     display: inline-block;
     position: relative;
@@ -84,7 +84,7 @@ article {
 }
 article h2 {
     text-align: center;
-    font-size: 30px;
+    font-size: 2em;
     text-shadow: 3px 3px rgba(0, 0, 0, 0.5);  
 }
 
@@ -95,7 +95,7 @@ article img {
 }
 
 article p {
-    font-size: 20px;
+    font-size: 1.5em;
     text-indent: 5%;
     padding: 2%;
     text-shadow: 3px 3px rgba(0, 0, 0, 0.4); 
@@ -103,7 +103,7 @@ article p {
 
 .hero {
     display: flex;
-    max-width: 100%;
+    max-width: auto;
     max-height: auto;
     border: var(--default-border);
 }
@@ -138,7 +138,7 @@ article p {
     border: 0.2em solid green;
     font-size: 2rem;
     padding: 0.3em;
-    width: 20%;
+    width: auto;
     text-align: center;
     background: var(--section-bg);
     color: var(--section-color);
@@ -168,12 +168,10 @@ article p {
 .placeholder1 figcaption,
 .placeholder2 figcaption,
 .placeholder3 figcaption {
-    border-bottom: 0.2em solid green;
-    border-left: 0.2em solid green;
-    border-right: 0.2em solid green;
+    border: 0.2em solid green;
     font-size: 1.5em;
     padding: 0.3em;
-    width: 15%;
+    width: auto;
     text-align: center;
     background: var(--section-bg);
     color: var(--section-color);
@@ -241,4 +239,15 @@ footer nav p:after {
     left: 0;
     right: 0;
     bottom: 0px;
+  }
+
+  @media (max-width: 1400px) {
+    .about-me-images {
+        display: flex;
+        justify-content: center;
+    }
+    
+    .hero {
+        display: none;
+    }
   }
